@@ -10,6 +10,11 @@ class QuestionsController < ApplicationController
         render json: @question
     end
 
+    def destroy 
+        quiz = Quiz.find_by(id: params[:id])
+        quiz.destroy
+    end 
+
     def create
         # byebug
         question = Question.create!(question_params)
