@@ -14,7 +14,7 @@ joseph = User.create(username: "josephy", password: "pass123")
 
 # CREATING QUESTIONS
 
-questions = JSON.parse(RestClient.get("https://opentdb.com/api.php?amount=20").body)["results"]
+questions = JSON.parse(RestClient.get("https://opentdb.com/api.php?amount=50").body)["results"]
 questions.each do |quest|
     Question.create!(category: quest["category"], difficulty: quest["difficulty"], question: quest["question"], correct_answer: quest["correct_answer"], incorrect_answers: (quest["incorrect_answers"].class == Array ? quest["incorrect_answers"].join(', '): quest["incorrect_answer"]))
 end
