@@ -1,5 +1,3 @@
-
-
 User.destroy_all
 Question.destroy_all
 Quiz.destroy_all
@@ -33,5 +31,3 @@ Quiz.create(name:"Joseph's Awesome Quiz", user_id: 2, question_id: 14)
 Quiz.create(name:"All About the Quiz", user_id: 2, question_id: 15)
 Quiz.create(name:"All About the Quiz", user_id: 2, question_id: 16)
 
-# https://opentdb.com/api.php?amount=25&category=9&difficulty=easy&type=multiple
-# https://opentdb.com/api.php?amount=10&category=9&difficulty=easy
