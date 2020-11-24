@@ -11,7 +11,6 @@ class QuestionsController < ApplicationController
     end
 
     def destroy 
-        # byebug
         question = Question.find_by(id: params[:id])
         question.destroy
     end 
